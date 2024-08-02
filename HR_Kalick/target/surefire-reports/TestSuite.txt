@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 30, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 679.326 s <<< FAILURE! - in TestSuite
+runTestscript2(Delete)  Time elapsed: 2.19 s  <<< FAILURE!
+java.lang.AssertionError: Logo is not displayed expected [true] but found [false]
+	at Delete.runTestscript2(Delete.java:109)
+
+runTestscript7(Delete)  Time elapsed: 7.08 s  <<< FAILURE!
+java.lang.AssertionError: Confirm pop-up is still displayed expected [false] but found [true]
+	at Delete.runTestscript7(Delete.java:293)
+
+runTestscript11(Search)  Time elapsed: 5.3 s  <<< FAILURE!
+java.lang.AssertionError: The actual number of records does not match the expected count. expected [15] but found [10]
+	at Search.runTestscript11(Search.java:357)
+
+runTestscript18(Search)  Time elapsed: 22.226 s  <<< FAILURE!
+java.lang.AssertionError: Error message is not displayed expected [true] but found [false]
+	at Search.runTestscript18(Search.java:567)
+
+runTestscript22(Search)  Time elapsed: 6.291 s  <<< FAILURE!
+java.lang.AssertionError: Button text is not as expected expected [+ Add employee] but found [Add Employee]
+	at Search.runTestscript22(Search.java:679)
+

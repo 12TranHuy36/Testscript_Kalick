@@ -1,0 +1,426 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>25/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 02 03:23:38 ICT 2024</td>
+</tr>
+<tr><td>Total time:</td><td>678 seconds (678127 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Search.runTestscript11()'><b>runTestscript11</b><br>Test class: Search<br>Test method: Verify the number of records on 1 page</td>
+<td><div><pre>java.lang.AssertionError: The actual number of records does not match the expected count. expected [15] but found [10]
+	at Search.runTestscript11(Search.java:357)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1294534487", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1294534487'><pre>java.lang.AssertionError: The actual number of records does not match the expected count. expected [15] but found [10]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at Search.runTestscript11(Search.java:357)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>5</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript18()'><b>runTestscript18</b><br>Test class: Search<br>Test method: Verify that the error message â€œExceeds 255 charactersâ€? is displayed when user input 256 character into Search textbox</td>
+<td><div><pre>java.lang.AssertionError: Error message is not displayed expected [true] but found [false]
+	at Search.runTestscript18(Search.java:567)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1710518520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1710518520'><pre>java.lang.AssertionError: Error message is not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Search.runTestscript18(Search.java:567)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>22</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Delete.runTestscript2()'><b>runTestscript2</b><br>Test class: Delete<br>Test method: Verify that the logo is displayed correctly</td>
+<td><div><pre>java.lang.AssertionError: Logo is not displayed expected [true] but found [false]
+	at Delete.runTestscript2(Delete.java:109)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace27971761", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace27971761'><pre>java.lang.AssertionError: Logo is not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at Delete.runTestscript2(Delete.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>2</td>
+<td>Delete@2118cddf</td></tr>
+<tr>
+<td title='Search.runTestscript22()'><b>runTestscript22</b><br>Test class: Search<br>Test method: Verify that the Add employee button is displayed correctly</td>
+<td><div><pre>java.lang.AssertionError: Button text is not as expected expected [+ Add employee] but found [Add Employee]
+	at Search.runTestscript22(Search.java:679)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace114559531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace114559531'><pre>java.lang.AssertionError: Button text is not as expected expected [+ Add employee] but found [Add Employee]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at Search.runTestscript22(Search.java:679)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>6</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Delete.runTestscript7()'><b>runTestscript7</b><br>Test class: Delete<br>Test method: Verify that an employee is deleted when user click Delete button</td>
+<td><div><pre>java.lang.AssertionError: Confirm pop-up is still displayed expected [false] but found [true]
+	at Delete.runTestscript7(Delete.java:293)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2026325575", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2026325575'><pre>java.lang.AssertionError: Confirm pop-up is still displayed expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at Delete.runTestscript7(Delete.java:293)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>7</td>
+<td>Delete@2118cddf</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Delete.runTestscript1()'><b>runTestscript1</b><br>Test class: Delete<br>Test method: Verify that display Confirm pop-up when user click trash icon at column Action of record </td>
+<td></td>
+<td>5</td>
+<td>Delete@2118cddf</td></tr>
+<tr>
+<td title='Search.runTestscript1()'><b>runTestscript1</b><br>Test class: Search<br>Test method: Verify that move to Employee management screen when user click on function Employees at vertical toolbar on the left</td>
+<td></td>
+<td>7</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript10()'><b>runTestscript10</b><br>Test class: Search<br>Test method: Verify that the Table content is displayed correctly</td>
+<td></td>
+<td>5</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript12()'><b>runTestscript12</b><br>Test class: Search<br>Test method: Verify the pagination button displays color when on that page</td>
+<td></td>
+<td>10</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript13()'><b>runTestscript13</b><br>Test class: Search<br>Test method: Verify that Back button and Fisrt button is hidden when user is on the first page</td>
+<td></td>
+<td>27</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript14()'><b>runTestscript14</b><br>Test class: Search<br>Test method: Verify that Next button and Last button is hidden when user is on the last page</td>
+<td></td>
+<td>27</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript15()'><b>runTestscript15</b><br>Test class: Search<br>Test method: Verify that button maximum number displayed</td>
+<td></td>
+<td>5</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript16()'><b>runTestscript16</b><br>Test class: Search<br>Test method: Verify that the placeholder of Search textbox is displayed correctly </td>
+<td></td>
+<td>0</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript17()'><b>runTestscript17</b><br>Test class: Search<br>Test method: Verify that displayed is message 'Table is empty' when don't have records</td>
+<td></td>
+<td>11</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript19()'><b>runTestscript19</b><br>Test class: Search<br>Test method: Verify that the successfully when user input 255 character into Search textbox</td>
+<td></td>
+<td>26</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript2()'><b>runTestscript2</b><br>Test class: Search<br>Test method: Verify that the title Employees is displayed correctly</td>
+<td></td>
+<td>3</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript20()'><b>runTestscript20</b><br>Test class: Search<br>Test method: Verify that the successfully when user input 254 character into Search textbox</td>
+<td></td>
+<td>23</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript21()'><b>runTestscript21</b><br>Test class: Search<br>Test method: Verify that move to Add employee screen when user click on Add employee button</td>
+<td></td>
+<td>8</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript23()'><b>runTestscript23</b><br>Test class: Search<br>Test method: Verify that move to Update employee screen when user click on button eye at Actions field of one record </td>
+<td></td>
+<td>6</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Delete.runTestscript3()'><b>runTestscript3</b><br>Test class: Delete<br>Test method: Verify that the title is displayed correctly</td>
+<td></td>
+<td>2</td>
+<td>Delete@2118cddf</td></tr>
+<tr>
+<td title='Search.runTestscript3()'><b>runTestscript3</b><br>Test class: Search<br>Test method: Verify that the title Employee Details is displayed correctly</td>
+<td></td>
+<td>3</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Delete.runTestscript4()'><b>runTestscript4</b><br>Test class: Delete<br>Test method: Verify that the button Cancel is displayed correctly</td>
+<td></td>
+<td>2</td>
+<td>Delete@2118cddf</td></tr>
+<tr>
+<td title='Search.runTestscript4()'><b>runTestscript4</b><br>Test class: Search<br>Test method: Verify that the dropdown list Role title is displayed correctly</td>
+<td></td>
+<td>3</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Delete.runTestscript5()'><b>runTestscript5</b><br>Test class: Delete<br>Test method: Verify that the button Delete is displayed correctly</td>
+<td></td>
+<td>2</td>
+<td>Delete@2118cddf</td></tr>
+<tr>
+<td title='Search.runTestscript5()'><b>runTestscript5</b><br>Test class: Search<br>Test method: Verify that the dropdown list Employment Status is displayed correctly</td>
+<td></td>
+<td>3</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Delete.runTestscript6()'><b>runTestscript6</b><br>Test class: Delete<br>Test method: Verify that an employee don't delete when user click Cancel button</td>
+<td></td>
+<td>18</td>
+<td>Delete@2118cddf</td></tr>
+<tr>
+<td title='Search.runTestscript6()'><b>runTestscript6</b><br>Test class: Search<br>Test method: Verify that values list is displayed when user click on Role title dropdown list</td>
+<td></td>
+<td>12</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript7()'><b>runTestscript7</b><br>Test class: Search<br>Test method: Verify that values list is displayed when user click on Employee status dropdown list</td>
+<td></td>
+<td>8</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript8()'><b>runTestscript8</b><br>Test class: Search<br>Test method: Verify that action auto filter record when user selected value at Role title dropdown list</td>
+<td></td>
+<td>27</td>
+<td>Search@17a7f733</td></tr>
+<tr>
+<td title='Search.runTestscript9()'><b>runTestscript9</b><br>Test class: Search<br>Test method: Verify that action auto filter record when user selected value at Employee status dropdown list</td>
+<td></td>
+<td>47</td>
+<td>Search@17a7f733</td></tr>
+</table><p>
+</body>
+</html>
